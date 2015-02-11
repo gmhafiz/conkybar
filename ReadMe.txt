@@ -1,14 +1,23 @@
-ConkyBar - V2.0
-===================
-I've tested this running an up-to-date linux arch 64bit installation but it should work on other
-distro's too. It uses nothing specific for linux arch.
+ConkyBar V1.0 forked by gmhafiz
+===============================
+
+This ConkyBar is a modified version of N00by4Ever's at 
+http://n00by4ever.deviantart.com/art/conky-conkyBar-launchpad-V2-0-401254455
+
+I removed banshee support although the config is still present. I also added local ip address to the 
+network config.
+
+http://i.imgur.com/ecG9cdr.jpg
+
+Useful info:
 
 Colors (for color0 + lua files)
-====================
+===============================
 Arch 		1793d0	(blue)
 Mint 		77B753	(green)
 Ubuntu		dd4814	(orange)
 Debian 		d70a53	(red)
+
 
 Installation steps:
 ====================
@@ -20,9 +29,6 @@ Installation steps:
 6) Make sure you've installed the fonts in /fonts
 7) Edit the system specific setting, for example in conky_network change it to your wifi/eth interface
 
-Enjoy!
-(you can ignore the debug folder)
-
 
 Known bugs
 ====================
@@ -31,13 +37,10 @@ Known bugs
 - The outlinement is not perfect
 - Seconds uptime are 1sec off
 
-Updates
-====================
--V2.0 general improvements, updated images, improved allignment, code cleanup, ...
--V1.0 initial commit
 
 Credits
 ====================
+N00by4Ever's - http://n00by4ever.deviantart.com/art/conky-conkyBar-launchpad-V2-0-401254455
 Look based on: Conky Launchpad - http://freeazy.deviantart.com/art/Conky-Launchpad-186251285
 Thanks to crunchbang forums - http://crunchbang.org/forums/viewtopic.php?id=16909
 Icons - forgot sorry
