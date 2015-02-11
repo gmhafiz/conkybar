@@ -4,10 +4,10 @@ ConkyBar V1.0 forked by gmhafiz
 This ConkyBar is a modified version of N00by4Ever's at 
 http://n00by4ever.deviantart.com/art/conky-conkyBar-launchpad-V2-0-401254455
 
-I removed banshee support although the config is still present. I also added local ip address to the 
-network config.
+I replaced banshee support with modified weather config obtained from Conky Manager's .conkyrc-dark 
+I also added local ip address to the network config.
 
-http://i.imgur.com/ecG9cdr.jpg
+Screenshot: http://i.imgur.com/ecG9cdr.jpg
 
 Useful info:
 
@@ -45,6 +45,7 @@ Look based on: Conky Launchpad - http://freeazy.deviantart.com/art/Conky-Launchp
 Thanks to crunchbang forums - http://crunchbang.org/forums/viewtopic.php?id=16909
 Icons - forgot sorry
 Banshee implementation - kaivalagi  - http://ubuntuforums.org/showthread.php?t=1223883
+Weather config - https://launchpad.net/conky-manager
 
 Feel free to fork/improve
 
