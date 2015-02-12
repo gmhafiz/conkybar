@@ -21,8 +21,8 @@ Debian 		d70a53	(red)
 
 Installation steps:
 ====================
-1) Put the folder .conkyconfig in your home folder.
-2) Make sure your conky version stupport lua and nvidia (arch: conky-lua-nv)
+1) Put the files in a folder such as .conkyconfig in your home folder.
+2) Make sure your conky version support lua and nvidia (arch: conky-lua-nv)
 3) Make sure you've got all the dependencies (hddtemp, iostat, ...) and they are running (also on startup)
 4) Make conky_start (and all files in /lua and /scripts) executable.
 5) Add conky_start to your startup programs
