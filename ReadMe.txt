@@ -21,18 +21,22 @@ Debian 		d70a53	(red)
 
 Installation steps:
 ====================
-1) Put the files in a folder such as .conkyconfig in your home folder.
-2) Make sure your conky version support lua and nvidia (arch: conky-lua-nv)
-3) Make sure you've got all the dependencies (hddtemp, iostat, ...) and they are running (also on startup)
-4) Make conky_start (and all files in /lua and /scripts) executable.
-5) Add conky_start to your startup programs
-6) Make sure you've installed the fonts in /fonts
-7) Edit the system specific setting, for example in conky_network change it to your wifi/eth interface
+1) mkdir -p ~/.conky/conkybar
+2) cd ~/.conky/conkybar
+3) git init
+4) git pull https://github.com/gmhafiz/conkybar.git
+
+5) Make sure your conky version support lua and nvidia (arch: conky-lua-nv)
+6) Make sure you've got all the dependencies (hddtemp, iostat, ...) and they are running (also on startup)
+7) Make conky_start (and all files in /lua and /scripts) executable.
+8) Add conky_start to your startup programs
+9) Make sure you've installed the fonts in /fonts
+10) Edit the system specific setting, for example in conky_network change it to your wifi/eth interface
 
 
 Known bugs
 ====================
-- Pauze banshee -> wrong current position value -> bug in banshee --query-position -> I can't solve it
+- Pause banshee -> wrong current position value -> bug in banshee --query-position -> I can't solve it
 - The hdd graph (ring) does have a blank space in the beginning
 - The outlinement is not perfect
 - Seconds uptime are 1sec off
