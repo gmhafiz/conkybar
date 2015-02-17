@@ -51,16 +51,16 @@ background no
 use_spacer none
 update_interval 1
 
-lua_load ~/.conkyconfig/lua/banshee_bar.lua
+lua_load ~/.conky/conkybar/lua/banshee_bar.lua
 lua_draw_hook_pre main_bars
 
 TEXT
-${voffset 25}${GOTO 50}${font}Music${if_running banshee} - ${exec ~/.conkyconfig/scripts/conkyBanshee.py --datatype=ST}${endif}
-${GOTO 50}${font}Volume: ${font Monofur:size=8}${execi 1 ~/.conkyconfig/scripts/volume.sh}
+${voffset 25}${GOTO 50}${font}Music${if_running banshee} - ${exec ~/.conky/conkybar/scripts/conkyBanshee.py --datatype=ST}${endif}
+${GOTO 50}${font}Volume: ${font Monofur:size=8}${execi 1 ~/.conky/conkybar/scripts/volume.sh}
 
 
-${if_running banshee}${execp ~/.conkyconfig/scripts/conkyBanshee.py --template=~/.conkyconfig/scripts/conkyBanshee.template}${else}${voffset 20}${GOTO 50}${font}Load:${font Monofur:size=8}${GOTO 90}${cpu cpu1}${GOTO 115}${cpu cpu2}${GOTO 140}${cpu cpu3}${GOTO 165}${cpu cpu4}${GOTO 190}${cpu cpu5}${GOTO 215}${cpu cpu6}${GOTO 240}${cpu cpu7}${GOTO 265}${cpu cpu8} 
+${if_running banshee}${execp ~/.conky/conkybar/scripts/conkyBanshee.py --template=~/.conky/conkybar/scripts/conkyBanshee.template}${else}${voffset 20}${GOTO 50}${font}Load:${font Monofur:size=8}${GOTO 90}${cpu cpu1}${GOTO 115}${cpu cpu2}${GOTO 140}${cpu cpu3}${GOTO 165}${cpu cpu4}${GOTO 190}${cpu cpu5}${GOTO 215}${cpu cpu6}${GOTO 240}${cpu cpu7}${GOTO 265}${cpu cpu8} 
 ${GOTO 50}${font}Temp: ${font Monofur:size=8}${GOTO 95}${platform coretemp.0 temp 2}°C${GOTO 145}${platform coretemp.0 temp 3}°C${GOTO 195}${platform coretemp.0 temp 4}°C${GOTO 245}${platform coretemp.0 temp 5}°C
 ${voffset 10}${goto 50}${font}${color}Avg load: ${font Monofur:size=8} ${loadavg 1}${offset 20}${loadavg 2} ${offset 20}${loadavg 3}${offset 15}${font Monofur:size=7}(1|5|15 min)
-${image ~/.conkyconfig/img/cpu.png -p 0,80 -s 45x45}${endif}
-${if_match "${exec ~/.conkyconfig/scripts/volume.sh}"=="Muted"}${image ~/.conkyconfig/img/mute.png -p 0,15 -s 45x45}${else}${if_match "${exec ~/.conkyconfig/scripts/volume.sh}">"50"}${image ~/.conkyconfig/img/volumehigh.png -p 0,15 -s 45x45}${else}${image ~/.conkyconfig/img/volumemid.png -p 0,15 -s 45x45}${endif}${endif}
+${image ~/.conky/conkybar/img/cpu.png -p 0,80 -s 45x45}${endif}
+${if_match "${exec ~/.conky/conkybar/scripts/volume.sh}"=="Muted"}${image ~/.conky/conkybar/img/mute.png -p 0,15 -s 45x45}${else}${if_match "${exec ~/.conky/conkybar/scripts/volume.sh}">"50"}${image ~/.conky/conkybar/img/volumehigh.png -p 0,15 -s 45x45}${else}${image ~/.conky/conkybar/img/volumemid.png -p 0,15 -s 45x45}${endif}${endif}

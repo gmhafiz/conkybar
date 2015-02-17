@@ -20,17 +20,19 @@ Debian 		d70a53	(red)
 
 Installation steps:
 ====================
+Install dependencies
+	conky-lua wget hddtemp wget
+
 1) mkdir -p ~/.conky/conkybar
 2) cd ~/.conky/conkybar
 3) git init
 4) git pull https://github.com/gmhafiz/conkybar.git
 
-5) Make sure your conky version support lua and nvidia (arch: conky-lua-nv)
-6) Make sure you've got all the dependencies (hddtemp, iostat, ...) and they are running (also on startup)
-7) Make conky_start (and all files in /lua and /scripts) executable.
-8) Add conky_start to your startup programs
-9) Make sure you've installed the fonts in /fonts
-10) Edit the system specific setting, for example in conky_network change it to your wifi/eth interface
+5) If you have Nvidia, make sure your conky version support lua and nvidia (arch: conky-lua-nv)
+6) Make conky_start (and all files in /lua and /scripts) executable.
+7) Add conky_start to your startup programs
+8) Make sure you've installed the fonts in /fonts
+9) Edit the system specific setting, for example in conky_network change it to your wifi/eth interface
 
 
 Known bugs

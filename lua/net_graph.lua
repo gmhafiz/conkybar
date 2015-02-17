@@ -5,7 +5,7 @@ function set_settings()
 
         {--Upload Bar
         name="upspeedf",
-        arg="enp5s0",
+        arg="wlp1s0",
         max=100,
         autoscale=true,
         x=50,        y=90,
@@ -19,7 +19,7 @@ function set_settings()
 
         {--Download Bar
         name="downspeedf",
-        arg="enp5s0",
+        arg="wlp1s0",
         max=100,
         autoscale=true,
         x=278,        y=95,
@@ -128,8 +128,8 @@ function conky_main_graph()
 			        --should stop weird glitches at beginning when no values reported yet for upspeed or diskio
                     if graph_settings[i].automax == 0 then graph_settings[i].automax = 1 end 
                 end
- 		    if conky_parse("${if_existing /proc/net/route enp5s0}1${else}0${endif}") then 
-				graph_settings[i].arg = "enp5s0"
+ 		    if conky_parse("${if_existing /proc/net/route wlp1s0}1${else}0${endif}") then 
+				graph_settings[i].arg = "wlp1s0"
 				draw_graph(graph_settings[i])
 		    elseif conky_parse("${if_existing /proc/net/route wlp2s0}1${else}0${endif}") then 
 				graph_settings[i].arg = "wlp2s0"
