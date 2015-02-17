@@ -21,7 +21,7 @@ Debian 		d70a53	(red)
 Installation steps:
 ====================
 Install dependencies
-	conky-lua wget hddtemp wget
+	conky-lua wget hddtemp wget ttf-monofur ttf-opensans
 
 1) mkdir -p ~/.conky/conkybar
 2) cd ~/.conky/conkybar
