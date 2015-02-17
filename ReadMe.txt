@@ -1,6 +1,5 @@
-ConkyBar V1.0 forked by gmhafiz
+ConkyBar V1.1 forked by gmhafiz
 ===============================
-
 This ConkyBar is a modified version of N00by4Ever's at 
 http://n00by4ever.deviantart.com/art/conky-conkyBar-launchpad-V2-0-401254455
 
@@ -40,6 +39,12 @@ Known bugs
 - The hdd graph (ring) does have a blank space in the beginning
 - The outlinement is not perfect
 - Seconds uptime are 1sec off
+
+
+Changelog
+=========
+v1.1 10x4x600 support
+v1.0 Initial fork
 
 
 Credits
