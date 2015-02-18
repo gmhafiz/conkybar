@@ -15,11 +15,11 @@ double_buffer yes
 minimum_size 313 165
 maximum_width 313
 gap_x 680
-gap_y 300
+gap_y 250
 
 #------------------------- FONT
 use_xft yes
-xftfont Monofur:bold:size=8
+xftfont Monofur:bold:size=10
 xftalpha 0.8 	# Alpha of Xft font. Must be a value at or between 1 and 0 ###
 override_utf8_locale yes
 draw_shades yes
@@ -53,8 +53,7 @@ update_interval 1
 
 TEXT
 ${execi 300 curl -s "http://weather.yahooapis.com/forecastrss?w=1105779&u=c" -o ~/.cache/weather.xml}${font Open Sans Light:size=15}${execi 300 grep "yweather:location" ~/.cache/weather.xml | grep -o "city=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}, ${execi 300 grep "yweather:location" ~/.cache/weather.xml | grep -o "country=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${font}
-
-${font Open Sans Light:size=58}${alignr}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°${font}${voffset -24}
+${font Open Sans Light:size=58}${alignr}${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°${font}${voffset -28}
 ${execi 300 cp -f ~/.conky/conkybar/img/conky-google-now/$(grep "yweather:condition" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*").png ~/.cache/weather.png}${image ~/.cache/weather.png -p 0,45 -s 56x56}
 ${execi 300 grep "yweather:condition" ~/.cache/weather.xml | grep -o "text=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tr '[a-z]' '[A-Z]'}${voffset 10}${font Monofur:size=10}
 ${image ~/.conky/conkybar/img/conky-google-now/wind.png -p 0,115 -s 15x15}${goto 35}${execi 300 grep "yweather:wind" ~/.cache/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${execi 300 grep "yweather:units" ~/.cache/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}

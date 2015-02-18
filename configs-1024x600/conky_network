@@ -15,7 +15,7 @@ double_buffer yes
 minimum_size 313 165
 maximum_width 313
 gap_x 680
-gap_y 100
+gap_y 60
 
 #------------------------- FONT
 use_xft yes
@@ -53,7 +53,8 @@ lua_draw_hook_pre main_graph
 TEXT
 ${if_existing /proc/net/route wlp1s0}${voffset 25}${GOTO 50}${font}Network
 ${GOTO 50}${font}Public ip: ${font Monofur:size=10}${texeci 3600 wget -qO - http://cfajohnson.com/ipaddr.cgi}
-${GOTO 50}${font}Local ip: ${font Monofur:size=10}${execi 300 ip addr | grep 192 | cut -c 10-20}
+${GOTO 50}${font}Local ip: ${font Monofur:size=10}${execi 300 ip addr | grep 10.249 | cut -c 10-22}
+#ip addr | grep 10 | cut -c 0-10
 ${voffset 70}${GOTO 50}${font}Recieve: ${font Monofur:size=10}${downspeed wlp1s0}${GOTO 200}${font}Send: ${font Monofur:size=10}${upspeed wlp1s0}
 ${image ~/.conky/conkybar/img/networkhigh.png -p 0,15 -s 45x45}${else}${if_existing /proc/net/route wlp2s0}${voffset 25}${GOTO 50}${font}Network
 ${GOTO 50}${font}Public ip: ${font Monofur:size=10}$${texeci 3600 wget -qO - http://cfajohnson.com/ipaddr.cgi}${GOTO 200}${font}Sig: ${font Monofur:size=10}${wireless_link_qual_perc wlp2s0}%
