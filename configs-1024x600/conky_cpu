@@ -55,7 +55,7 @@ lua_load ~/.conky/conkybar/lua/cpu_graph.lua
 lua_draw_hook_pre main_graph
 
 TEXT
-${voffset 25}${GOTO 50}${font}CPU
+${voffset 25}${GOTO 50}${font}CPU ${font}Uptime: ${font Monofur:size=10}${uptime_short}${GOTO 225}(${color0}${exec ~/.conky/conkybar/scripts/uptime.sh}${color})
 ${GOTO 50}${font}Avg use: ${font Monofur:size=10}${cpu cpu0}% ${GOTO 175}${font}Freq: ${font Monofur:size=10}${freq_g} Ghz
 ${voffset 27}${GOTO 50}${font Monofur:size=10}${color0}${top name 1}${GOTO 165}${top cpu 1}%${GOTO 220}${top mem 1}%
 ${GOTO 50}${font Monofur:size=10}${color1}${top name 2}${GOTO 165}${top cpu 2}%${GOTO 220}${top mem 2}%
