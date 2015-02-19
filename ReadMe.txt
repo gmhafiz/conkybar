@@ -45,7 +45,8 @@ Known bugs
 
 Changelog
 =========
-v1.1 10x4x600 support
+v1.2 fine tuned position, added weather widget and cpu uptime for 1024x600
+v1.1 Initial 1024x600 support
 v1.0 Initial fork
 
 
