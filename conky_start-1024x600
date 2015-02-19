@@ -1,7 +1,7 @@
 #!/bin/bash
 killall conky
 #conky -c ~/.conky/conkybar/configs/conky_bg &
-#conky -p 1 -c ~/.conky/conkybar/configs-1024x600/conky_txt &
+conky -p 1 -c ~/.conky/conkybar/configs-1024x600/conky_txt &
 #conky -p 3 -c ~/.conky/conkybar/configs-1024x600/conky_system &
 conky -p 1 -c ~/.conky/conkybar/configs-1024x600/conky_cpu &
 conky -p 2 -c ~/.conky/conkybar/configs-1024x600/conky_ram &

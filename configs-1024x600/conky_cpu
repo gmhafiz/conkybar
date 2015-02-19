@@ -15,7 +15,7 @@ double_buffer yes
 minimum_size 313 165
 maximum_width 313
 gap_x 40
-gap_y 60
+gap_y 50
 
 #------------------------- FONT
 use_xft yes

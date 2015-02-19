@@ -20,7 +20,7 @@ own_window_argb_value 240
 #------------------------- Location
 #minimum_size 1024 165
 gap_x 0
-gap_y 60
+gap_y 40
 
 #------------------------- BORDER
 draw_borders no
