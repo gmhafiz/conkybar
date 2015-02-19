@@ -10,7 +10,7 @@ function set_settings()
         autoscale=true,
         x=50,
         y=75,
-        width=248,
+        width=218,
         height=10,
         nb_values=500,
         background =false,
